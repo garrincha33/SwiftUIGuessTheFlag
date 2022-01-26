@@ -9,8 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!, first commit")
-            .padding()
+        VStack(alignment: .leading) {
+            HStack {
+                Text("testing grids")
+                Text("testing grids")
+                Text("testing grids")
+            }.padding()
+            
+            HStack {
+                Text("testing grids")
+                Text("testing grids")
+                Text("testing grids")
+            }.padding()
+            
+            HStack {
+                Text("testing grids")
+                Text("testing grids")
+                Text("testing grids")
+            }.padding()
+                
+        }.padding()
+   
     }
 }
 
