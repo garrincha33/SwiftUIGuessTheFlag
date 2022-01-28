@@ -18,13 +18,16 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            Color.mint.ignoresSafeArea()
+            LinearGradient(gradient: Gradient(colors: [.mint, .orange]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
             VStack(spacing: 30) {
                 VStack {
                     Text("tap the flag of")
                         .foregroundColor(.white)
+                        .font(.subheadline.weight(.heavy))
                     Text(countries[correctAnswer])
                         .foregroundColor(.white)
+                        .font(.largeTitle.weight(.bold))
+                        
                 }
                 
                 ForEach(0..<3) { number in
@@ -35,6 +38,7 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200.0,height:200)
+                            .shadow(radius: 10)
 
                     }
                 }
